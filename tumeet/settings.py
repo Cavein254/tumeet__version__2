@@ -145,6 +145,17 @@ SITE_ID = 1
 AUTH_USER_MODEL = 'users.user'
 
 
+AUTHENTICATION_BACKENDS = (
+    "django.contrib.auth.backends.ModelBackend",
+    "allauth.account.auth_backends.AuthenticationBackend",
+)
+LOGIN_REDIRECT_URL = '/'
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+
+
+
 
 SOCIALACCOUNT_PROVIDER = {
     'github': {
