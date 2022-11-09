@@ -27,6 +27,7 @@ class User(AbstractBaseUser, PermissionsMixin):
         app_label = 'users'
     email = models.EmailField(max_length=255, unique=True)
     first_name = models.CharField(max_length=100)
+    username = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
     user_name = models.CharField(max_length=100)
     is_staff = models.BooleanField(default=False)
